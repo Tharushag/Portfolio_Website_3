@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tharusha Gunawardane | Web Developer</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/tharusha.ico') }}">
+
+    <!--Local CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <section id="Home">
+        <nav class="navbar flex-div vr-cen">
+            <a class="nav-brand" href="{{ url_for('home') }}">&lt;T&gt;</a>
+
+            <div class="navbar-nav height-transition flex-div vr-cen">
+                <ul class="nav-list flex-div">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#About">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Projects">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Message">Message</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-box">
+                <hr class="bar">
+                <hr class="bar bottom">
+            </div>
+        </nav>
+
+        <div class="main-description">
+            <h1 class="main-name">Tharusha Gunawardane</h1>
+            <p class="main-job">Web developer</p>
+        </div>
+
+        <div class="arrow-box flex-div">
+            <img class="arrow non-draggable" src="{{ url_for('static', filename='images/right-arrow.png') }}">
+        </div>
+
+        <ul class="contact-list flex-div">
+            <li>
+                <a href="mailto:tharushadgunawardane@gmail.com" target="_blank">
+                    <img class="contact non-draggable" src="{{ url_for('static', filename='images/email.png') }}">
+                </a>
+            </li>
+            <li>
+                <a href="https://stackoverflow.com/users/14306793/tharu" target="_blank">
+                    <img class="contact non-draggable" src="{{ url_for('static', filename='images/stack-overflow.png') }}">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/tharusha-gunawardane-80a014252/" target="_blank">
+                    <img class="contact non-draggable" src="{{ url_for('static', filename='images/linkedin.png') }}">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Old-Arrack" target="_blank">
+                    <img class="contact non-draggable" src="{{ url_for('static', filename='images/github.png') }}">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="About">
+        <p class="section-header">About</p>
+        <p class="section-para">Hi there! My name is Tharusha Gunawardane and I am a web developer with a passion for creating dynamic and engaging user experiences. I have been coding since 2019 and have developed a strong skill set in technologies such as Python, Flask, HTML, CSS, Javascript, and Figma. While my focus is primarily on front-end development, I have also acquired some knowledge in the backend area. I am always looking for new challenges and opportunities to further improve my skills and produce high-quality work.</p>
+    </section>
+
+    <a id="Resume" href="{{ url_for('static', filename='files/Tharusha_Gunawardane.pdf') }}">
+        <i class="fa-regular fa-file"></i><p>My Resume</p>
+    </a>
+
+    <section id="Projects">
+        <p class="section-header">Projects</p>
+        <p class="section-para">Bringing Ideas to Life: A Collection of Innovative and Impactful Web Development Projects</p>
+
+        <div class="tile-box flex-div">
+            <a class="tile-cover top50 mobile" id="Cofee" href="https://old-arrack.github.io/Coffee-Shop/" target="_blank">
+            </a>
+
+            <a class="tile-cover top50 mobile" id="Memento" href="https://www.figma.com/file/yI0LCHLNQ9EAzRYO41ZVBX/Memento?node-id=0%3A1&t=iiXabt4kBzYsmF6l-1" target="_blank">
+            </a>
+
+            <a class="tile-cover top50 mobile" id="Mct" href="https://minecrafttreasurehunt.onrender.com/" target="_blank">
+            </a>
+
+            <a class="tile-cover mid33 mobile" id="Edomain" href="https://edomain.onrender.com/" target="_blank">
+            </a>
+        </div>
+
+<!--            <div class="tile-cover">-->
+<!--                <div class="tile"></div>-->
+<!--            </div>-->
+
+<!--            <div class="tile-cover mid33 top50">-->
+<!--                <div class="tile"></div>-->
+<!--            </div>-->
+
+<!--            <div class="tile-cover">-->
+<!--                <div class="tile"></div>-->
+<!--            </div>-->
+
+<!--            <div class="tile-cover top50">-->
+<!--                <div class="tile"></div>-->
+<!--            </div>-->
+
+<!--            <div class="tile-cover mid33">-->
+<!--                <div class="tile"></div>-->
+<!--            </div>-->
+
+<!--            <div class="tile-cover">-->
+<!--                <div class="tile"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="show-box">-->
+<!--            <button class="show-btn">Show more</button>-->
+<!--        </div>-->
+    </section>
+
+    <section id="Message">
+        <p class="section-header">Message me</p>
+        <p class="section-para">Looking forward to delivering exceptional results on your project. Let's connect and discuss further.</p>
+
+        <form action="{{ url_for('send_msg') }}" method="POST">
+            <div class="user-details-box flex-div">
+                <div class="user-details">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Frank Castle" required>
+                </div>
+
+                <div class="user-details">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="frank@castle.r" required>
+                </div>
+            </div>
+
+            <label>Message</label>
+            <textarea name="msg" placeholder="Hello, I would like to discuss about x project." required></textarea>
+
+            <div class="btn-box">
+                <div class="shadow-box">
+                    <div class="btn">Send</div>
+                    <div class="btn shadow">Send</div>
+                </div>
+            </div>
+            <button class="send-btn" type="submit"></button>
+        </form>
+    </section>
+
+    <footer>
+        <div>
+            <p class="footer-title">Credits</p>
+            <div class="credit-row-box">
+                <div class="credit-row">
+                    <div class="credit-box">
+                        <a class="credit" href="https://www.flaticon.com/authors/stockio" title="Stockio">Icons made by Stockio from www.flaticon.com</a>
+                        <a href="https://www.flaticon.com/authors/stockio">
+                            <img class="open-url non-draggable" src="{{ url_for('static', filename='images/share.png') }}">
+                        </a>
+                    </div>
+
+                    <div class="credit-box">
+                        <a class="credit" href="https://www.flaticon.com/authors/uniconlabs" title="Uniconlabs">Icons made by Uniconlabs from www.flaticon.com</a>
+                        <a href="https://www.flaticon.com/authors/uniconlabs">
+                            <img class="open-url non-draggable" src="{{ url_for('static', filename='images/share.png') }}">
+                        </a>
+                    </div>
+
+                    <div class="credit-box">
+                        <a class="credit" href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Icons made by Pixel perfect from www.flaticon.com</a>
+                        <a href="https://www.flaticon.com/authors/pixel-perfect">
+                            <img class="open-url non-draggable" src="{{ url_for('static', filename='images/share.png') }}">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="credit-row">
+                    <div class="credit-box">
+                        <a class="credit" href="https://www.freepik.com" title="Freepik"> Icons made by Freepik from www.flaticon.com</a>
+                        <a href="https://www.freepik.com">
+                            <img class="open-url non-draggable" src="{{ url_for('static', filename='images/share.png') }}">
+                        </a>
+                    </div>
+
+                    <div class="credit-box">
+                        <a class="credit" href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Icons made by Pixel perfect from www.flaticon.com</a>
+                        <a href="https://www.flaticon.com/authors/pixel-perfect">
+                            <img class="open-url non-draggable" src="{{ url_for('static', filename='images/share.png') }}">
+                        </a>
+                    </div>
+
+                    <div class="credit-box">
+                        <a class="credit" href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Roundicons - Flaticon</a>
+                        <a href="https://www.flaticon.com/free-icons/github">
+                            <img class="open-url non-draggable" src="{{ url_for('static', filename='images/share.png') }}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="github-box">
+            <img class="github non-draggable" src="{{ url_for('static', filename='images/github-color.png') }}">
+            <p class="github-description">Find the code for this website on <a href="link">Github</a></p>
+        </div>
+
+        <p class="copyright">© Tharusha Gunawardane 2022 — All rights reserved.</p>
+
+        <!--Local JS-->
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+        <!--FontAwesome-->
+        <script src="https://kit.fontawesome.com/c90aab8689.js" crossorigin="anonymous"></script>
+    </footer>
+</body>
+</html>
